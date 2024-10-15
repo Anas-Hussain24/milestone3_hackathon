@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="resumeName">Resume Generator</h1>
+        </header>
+
+        <div class="button-container">
+            <button id="personalBtn" class="nav-btn active">Personal Info</button>
+            <button id="experienceBtn" class="nav-btn">Experience</button>
+            <button id="skillsBtn" class="nav-btn">Skills & Education</button>
+        </div>
+
+        <div id="personalSection" class="section active">
+            <h2>Personal Information</h2>
+            <form id="resumeForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="City, State" required>
+
+                <label for="linkedIn">LinkedIn Profile:</label>
+                <input type="url" id="linkedIn" name="linkedIn" placeholder="LinkedIn Profile URL">
+
+                <label for="portfolio">Portfolio Website:</label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="Portfolio Website URL">
+
+                <button type="button" id="nextToExperience" class="next-btn">Next: Experience</button>
+            </form>
+        </div>
+
+        <div id="experienceSection" class="section">
+            <h2>Work Experience</h2>
+            <form>
+                <label for="job1">Job Title #1:</label>
+                <input type="text" id="job1" name="job1" placeholder="Enter your most recent job title" required>
+
+                <label for="company1">Company Name:</label>
+                <input type="text" id="company1" name="company1" placeholder="Company name" required>
+
+                <label for="duration1">Duration:</label>
+                <input type="date" id="duration1" name="duration1" placeholder="Duration (e.g., Jan 2020 - Present)" required>
+
+                <label for="desc1">Job Responsibilities:</label>
+                <textarea id="desc1" name="desc1" rows="4" placeholder="Describe your job responsibilities"></textarea>
+
+                <button type="button" id="nextToSkills" class="next-btn">Next: Skills & Education</button>
+            </form>
+        </div>
+
+        <div id="skillsSection" class="section">
+            <h2>Skills & Education</h2>
+            <form>
+                <label for="skills">Technical Skills:</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, TypeScript, React, Tailwind CSS" required>
+
+                <label for="softSkills">Soft Skills:</label>
+                <input type="text" id="softSkills" name="softSkills" placeholder="e.g., Communication, Teamwork">
+
+                <label for="degree1">Degree #1:</label>
+                <input type="text" id="degree1" name="degree1" placeholder="Degree title (e.g., Bachelor of Science)" required>
+
+                <label for="school1">Institution:</label>
+                <input type="text" id="school1" name="school1" placeholder="Institution Name" required>
+
+                <label for="graduation1">Year of Graduation:</label>
+                <input type="date" id="graduation1" name="graduation1" placeholder="Year" required>
+
+                <button type="submit" id="submitResume" class="submit-btn">Submit Resume</button>
+            </form>
+        </div>
+
+        <div id="resumePreview" class="resume-preview">
+            <h2>Your Professional Resume</h2>
+            <div id="resumeOutput"></div>
+            <button onclick="window.print()" class="submit-btn">Print or Download PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
